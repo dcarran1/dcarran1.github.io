@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Your Knowledge</title>
+  <link rel="stylesheet" href="cssfile.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>The Modern Browser</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="browser.html">The Browser</a>
+    <a href="components.html">Components</a>
+    <a href="impact.html">Impacts</a>
+    <a href="market.html">Markets</a>
+    <a href="future.html">The Future</a>
+    <a href="references.html">References</a>
+    <a href="key concepts.html">Key Concepts</a>
+    <a href="about.html">About</a>
+    <a href="quiz.html">Test Your Knowledge</a>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Quiz Intro Section -->
+    <section id="home-intro">
+      <h2>Test Your Knowledge Quiz</h2>
+      <p>This quiz is meant to help users check their understanding of the modern browser.</p>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-box">
+      <form id="browserQuiz">
+
+        <!-- Question 1 -->
+        <div class="question-box">
+          <p><strong>1. Fill in the blank:</strong> A web ________ is a software application used to access websites on the internet.</p>
+          <input type="text" id="q1" name="q1">
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-box">
+          <p><strong>2. Which of the following is a web browser?</strong></p>
+          <label><input type="radio" name="q2" value="A"> Microsoft Word</label><br>
+          <label><input type="radio" name="q2" value="B"> Google Chrome</label><br>
+          <label><input type="radio" name="q2" value="C"> Excel</label><br>
+          <label><input type="radio" name="q2" value="D"> PowerPoint</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-box">
+          <p><strong>3. What does a browser do?</strong></p>
+          <label><input type="radio" name="q3" value="A"> Washes computer files</label><br>
+          <label><input type="radio" name="q3" value="B"> Builds computer hardware</label><br>
+          <label><input type="radio" name="q3" value="C"> Retrieves and displays webpages</label><br>
+          <label><input type="radio" name="q3" value="D"> Replaces the operating system</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-box">
+          <p><strong>4. Which browser is developed by Apple?</strong></p>
+          <label><input type="radio" name="q4" value="A"> Firefox</label><br>
+          <label><input type="radio" name="q4" value="B"> Edge</label><br>
+          <label><input type="radio" name="q4" value="C"> Safari</label><br>
+          <label><input type="radio" name="q4" value="D"> Chrome</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-box">
+          <p><strong>5. Select all that are common features of modern web browsers:</strong></p>
+          <label><input type="checkbox" name="q5" value="tabs"> Tabs</label><br>
+          <label><input type="checkbox" name="q5" value="bookmarks"> Bookmarks</label><br>
+          <label><input type="checkbox" name="q5" value="printer"> Built-in printer hardware</label><br>
+          <label><input type="checkbox" name="q5" value="privacy"> Privacy settings</label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-row">
+          <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+          <button type="button" onclick="resetQuiz()">Retake / Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-box"></section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>2026 This is a Class Project</p>
+    <a href="https://ksuweb.github.io/IT3203/">Class Website</a>
+  </footer>
+
+  <script>
+    function gradeQuiz() {
+      let score = 0;
+      const totalQuestions = 5;
+      let resultsHTML = "<h3>Quiz Results</h3>";
+
+      // Question 1
+      let q1 = document.getElementById("q1").value.trim().toLowerCase();
+      let q1Correct = q1 === "browser";
+      if (q1Correct) score++;
+      resultsHTML += "<p><strong>Question 1:</strong> " +
+        (q1Correct ? "<span class='correct'>Correct</span>" : "<span class='incorrect'>Incorrect</span>") +
+        " | Your answer: " + (q1 || "No answer") +
+        " | Correct answer: browser</p>";
+
+      // Question 2
+      let q2 = document.querySelector('input[name="q2"]:checked');
+      let q2Answer = q2 ? q2.value : "No answer";
+      let q2Correct = q2Answer === "B";
+      if (q2Correct) score++;
+      resultsHTML += "<p><strong>Question 2:</strong> " +
+        (q2Correct ? "<span class='correct'>Correct</span>" : "<span class='incorrect'>Incorrect</span>") +
+        " | Your answer: " + q2Answer +
+        " | Correct answer: B (Google Chrome)</p>";
+
+      // Question 3
+      let q3 = document.querySelector('input[name="q3"]:checked');
+      let q3Answer = q3 ? q3.value : "No answer";
+      let q3Correct = q3Answer === "C";
+      if (q3Correct) score++;
+      resultsHTML += "<p><strong>Question 3:</strong> " +
+        (q3Correct ? "<span class='correct'>Correct</span>" : "<span class='incorrect'>Incorrect</span>") +
+        " | Your answer: " + q3Answer +
+        " | Correct answer: C (Retrieves and displays webpages)</p>";
+
+      // Question 4
+      let q4 = document.querySelector('input[name="q4"]:checked');
+      let q4Answer = q4 ? q4.value : "No answer";
+      let q4Correct = q4Answer === "C";
+      if (q4Correct) score++;
+      resultsHTML += "<p><strong>Question 4:</strong> " +
+        (q4Correct ? "<span class='correct'>Correct</span>" : "<span class='incorrect'>Incorrect</span>") +
+        " | Your answer: " + q4Answer +
+        " | Correct answer: C (Safari)</p>";
+
+      // Question 5
+      let q5Selections = document.querySelectorAll('input[name="q5"]:checked');
+      let selectedValues = Array.from(q5Selections).map(item => item.value).sort();
+      let correctValues = ["bookmarks", "privacy", "tabs"].sort();
+
+      let q5Correct = JSON.stringify(selectedValues) === JSON.stringify(correctValues);
+      if (q5Correct) score++;
+      resultsHTML += "<p><strong>Question 5:</strong> " +
+        (q5Correct ? "<span class='correct'>Correct</span>" : "<span class='incorrect'>Incorrect</span>") +
+        " | Your answer: " + (selectedValues.length > 0 ? selectedValues.join(", ") : "No answer") +
+        " | Correct answer: tabs, bookmarks, privacy</p>";
+
+      let percent = (score / totalQuestions) * 100;
+      let passFail = percent >= 70
+        ? "<p class='correct'><strong>Result: Pass</strong></p>"
+        : "<p class='incorrect'><strong>Result: Fail</strong></p>";
+
+      resultsHTML =
+        passFail +
+        "<p><strong>Total Score:</strong> " + score + " / " + totalQuestions + " (" + percent.toFixed(0) + "%)</p>" +
+        resultsHTML;
+
+      document.getElementById("results").innerHTML = resultsHTML;
+    }
+
+    function resetQuiz() {
+      document.getElementById("browserQuiz").reset();
+      document.getElementById("results").innerHTML = "";
+    }
+  </script>
+
+</body>
+</html>
