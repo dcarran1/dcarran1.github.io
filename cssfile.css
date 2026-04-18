@@ -64,6 +64,11 @@ footer {
   flex-direction: column;
   align-items: center;
 } /* centers footer content and adds spacing */
+footer a {
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+}/* fixes footer link spacing and styling */
 
 /* ID selector for intro section */
 #home-intro {
