@@ -1,44 +1,58 @@
 /* General page styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f0f2f5;
   margin: 0;
   padding: 0;
-} /* sets a clean font, background color, and removes default spacing */
-
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}/* sets a clean font, background color, and removes default spacing */
 
 /* Header section */
 header {
-  background-color: #222;
+  background: linear-gradient(135deg, #141e30, #243b55);
   color: white;
-  padding: 20px;
+  padding: 34px 20px 24px;
   text-align: center;
-} /* centers the title and improves spacing */
+} /* centers the title and improves spacing, added gradient color*/
 
+header h1 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
 
-/* Navigation bar */
+/* this is for the navigation bar */
 nav {
-  background-color: #444;
-  padding: 12px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 20px 30px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 40px;
   flex-wrap: wrap;
-} 
+}
 
 
-/* Navigation links */
+/* this is for the navigation links */
 nav a {
-  color: white;
+  color: #e8eef5;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 7px;
-} /* makes links more readable and clickable */
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  padding: 6px 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: color 0.25s ease;
+}/* makes links more readable and clickable */
 
 
-/* Hover effect for links */
+/* this is a hover effect for links */
 nav a:hover {
-  text-decoration: underline;
+  color: white;
 }
 
 
@@ -46,27 +60,46 @@ nav a:hover {
 main {
   background-color: white;
   padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-} /* adds spacing */
+  margin: 18px auto 0;
+  width: 82%;
+  border-radius: 18px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 8px 25px rgba(20, 30, 48, 0.12);
+}
 
+main h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333;
+  max-width: 1100px;
+}
+
+main h2 {
+  font-size: 30px;
+  color: #111;
+}
 
 /* Footer section */
 footer {
-  background-color: #b5b2b2;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  margin-top: 20px;
-
+  background-color: #243b55;
+  color: #e8eef5;
+  padding: 20px;
+  margin-top: 0;   /* 👈 important */
   display: flex;
   flex-direction: column;
   align-items: center;
-} /* centers footer content and adds spacing */
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}/* centers footer content and adds spacing */
 footer a {
   margin-top: 5px;
-  color: rgb(0, 0, 0);
+  color: #e8eef5;
   text-decoration: none;
 }/* fixes footer link spacing and styling */
 
@@ -182,52 +215,41 @@ footer a {
   text-align: center;
 }
 
-/* this is for mobile phones, fixed the buttons taking up too much space */
+/* this is for mobile phones and I removed the buttons taking up too much space */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 14px 18px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
   }
+
   nav a {
-    background-color: #222;
-    border-radius: 6px;
-    padding: 8px 10px;
     font-size: 14px;
+    letter-spacing: 0.4px;
+    padding: 6px 0;
+    flex-shrink: 0;
   }
-  main {
-    width: 95%;
-    margin: 10px auto;
-    padding: 15px;
+
+  nav a:hover {
+    background: none;
+    color: white;
+    text-decoration: none;
   }
-  header {
-    font-size: 18px;
-    padding: 15px;
-  }
-  .image-box img {
-    width: 100%;
-  }
-}
-/* this is for smaller screen size */
-@media (max-width: 480px) {
-  nav {
-    gap: 6px;
-  }
-  nav a {
-    width: auto;
-    font-size: 13px;
-    padding: 7px 9px;
-  }
+
   main {
     width: 95%;
     margin: 5px auto;
     padding: 10px;
   }
+
   .toc, .key-terms {
     padding: 10px;
   }
 }
+
 /* this is for mobile improvements for the quiz section */
 @media (max-width: 768px) {
   .quiz-container {
@@ -241,7 +263,7 @@ footer a {
     padding: 12px;
     font-size: 16px;
   }
-  #result {
+  #results {
     font-size: 16px;
     padding: 12px;
   }
