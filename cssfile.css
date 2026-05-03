@@ -118,3 +118,112 @@ footer a {
 .key-terms li {
   margin-bottom: 8px;
 }
+
+/* this is for quiz page styling */
+.quiz-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #444;
+  margin-top: 20px;
+}
+.quiz-question {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.10);
+}
+.quiz-question h3 {
+  margin-top: 0;
+  color: #222;
+}
+.quiz-question label {
+  display: block;
+  margin: 6px 0;
+}
+.quiz-question input[type="text"] {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.quiz-button {
+  background-color: #444;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.quiz-button:hover {
+  background-color: #666;
+}
+
+/* this will make the quiz results stand out a bit better */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f0ff;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+}
+
+/* this is for mobile phones */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    width: 95%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  header {
+    font-size: 18px;
+    padding: 15px;
+  }
+  .image-box img {
+    width: 100%;
+  }
+}
+/* this is for smaller screen size */
+@media (max-width: 480px) {
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  main {
+    width: 95%;
+    margin: 5px auto;
+    padding: 10px;
+  }
+  .toc, .key-terms {
+    padding: 10px;
+  }
+}
+/* this is for mobile improvements for the quiz section */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 15px;
+  }
+  .quiz-question {
+    padding: 12px;
+  }
+  .quiz-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  #result {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
