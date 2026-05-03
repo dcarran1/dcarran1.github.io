@@ -136,9 +136,10 @@ footer a {
 
 .image-box img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
-} /* makes images responsive and rounded */
+} /* makes images same size height on all pages*/
 
 
 /* Styling lists inside new sections */
