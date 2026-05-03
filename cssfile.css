@@ -1,12 +1,12 @@
 /* General page styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  background: linear-gradient(180deg, #141e30 0%, #243b55 60%, #2c3e50 100%);
   margin: 0;
   padding: 0;
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
+  color: #90a8c5;   /* 👈 lighter text for dark background */
 }/* sets a clean font, background color, and removes default spacing */
 
 /* Header section */
@@ -54,35 +54,33 @@ nav a {
 nav a:hover {
   color: white;
 }
+a {
+  color: #c9d6ff;
+  text-decoration: none;
+}/* styles all links in the content area */
 
+a:hover {
+  color: white;
+  text-decoration: underline;
+}/* adds a hover effect to all links */
 
 /* Main content area */
 main {
-  background-color: white;
-  padding: 20px;
-  margin: 18px auto 0;
+  background: transparent; 
+  padding: 30px 20px;
+  margin: 0 auto;
   width: 82%;
-  border-radius: 18px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  box-shadow: 0px 8px 25px rgba(20, 30, 48, 0.12);
-}
-
-main h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 main p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: #333;
-  max-width: 1100px;
+  color: #e0e6ed;
 }
 
 main h2 {
-  font-size: 30px;
-  color: #111;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 /* Footer section */
@@ -111,21 +109,23 @@ footer a {
 
 /* Class selector for table of contents */
 .toc {
-  background-color: #b5aacf;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 8px;
-} /* highlights table of contents section */
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 12px;
 
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
 
 /* Class selector for key terms */
 .key-terms {
-  background-color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.06);
   padding: 15px;
   margin-top: 20px;
-  border-left: 5px solid #444;
+  border-left: 4px solid #c9d6ff;
   border-radius: 8px;
-} /* visually separates key terms */
+}
 
 
 /* Class selector for images / visual sections */
