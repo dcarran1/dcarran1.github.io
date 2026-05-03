@@ -38,17 +38,17 @@
     </section>
 
     <!-- Quiz Section -->
-    <section class="quiz-box">
+    <section class="quiz-container">
       <form id="browserQuiz">
 
         <!-- Question 1 -->
-        <div class="question-box">
+        <div class="quiz-question">
           <p><strong>1. Fill in the blank:</strong> A web ________ is a software application used to access websites on the internet.</p>
           <input type="text" id="q1" name="q1">
         </div>
 
         <!-- Question 2 -->
-        <div class="question-box">
+        <div class="quiz-question">
           <p><strong>2. Which of the following is a web browser?</strong></p>
           <label><input type="radio" name="q2" value="A"> Microsoft Word</label><br>
           <label><input type="radio" name="q2" value="B"> Google Chrome</label><br>
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Question 3 -->
-        <div class="question-box">
+        <div class="quiz-question">
           <p><strong>3. What does a browser do?</strong></p>
           <label><input type="radio" name="q3" value="A"> Washes computer files</label><br>
           <label><input type="radio" name="q3" value="B"> Builds computer hardware</label><br>
@@ -66,7 +66,7 @@
         </div>
 
         <!-- Question 4 -->
-        <div class="question-box">
+        <div class="quiz-question">
           <p><strong>4. Which browser is developed by Apple?</strong></p>
           <label><input type="radio" name="q4" value="A"> Firefox</label><br>
           <label><input type="radio" name="q4" value="B"> Edge</label><br>
@@ -75,7 +75,7 @@
         </div>
 
         <!-- Question 5 -->
-        <div class="question-box">
+        <div class="quiz-question">
           <p><strong>5. Select all that are common features of modern web browsers:</strong></p>
           <label><input type="checkbox" name="q5" value="tabs"> Tabs</label><br>
           <label><input type="checkbox" name="q5" value="bookmarks"> Bookmarks</label><br>
@@ -85,8 +85,8 @@
 
         <!-- Buttons -->
         <div class="button-row">
-          <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
-          <button type="button" onclick="resetQuiz()">Retake / Reset</button>
+        <button class="quiz-button" type="button" onclick="gradeQuiz()">Submit Quiz</button>
+        <button class="quiz-button" type="button" onclick="resetQuiz()">Retake / Reset</button>
         </div>
       </form>
     </section>
