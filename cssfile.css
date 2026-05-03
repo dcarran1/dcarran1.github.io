@@ -56,7 +56,7 @@ main {
 /* Footer section */
 footer {
   background-color: #b5b2b2;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 15px;
   margin-top: 20px;
 
@@ -66,7 +66,7 @@ footer {
 } /* centers footer content and adds spacing */
 footer a {
   margin-top: 5px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }/* fixes footer link spacing and styling */
 
@@ -182,11 +182,19 @@ footer a {
   text-align: center;
 }
 
-/* this is for mobile phones */
+/* this is for mobile phones, fixed the buttons taking up too much space */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+  }
+  nav a {
+    background-color: #222;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
   }
   main {
     width: 95%;
@@ -203,11 +211,13 @@ footer a {
 }
 /* this is for smaller screen size */
 @media (max-width: 480px) {
+  nav {
+    gap: 6px;
+  }
   nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
+    width: auto;
+    font-size: 13px;
+    padding: 7px 9px;
   }
   main {
     width: 95%;
