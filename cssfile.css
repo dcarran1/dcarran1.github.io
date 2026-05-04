@@ -158,30 +158,43 @@ footer a {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
-  border-left: 5px solid #444;
+  border-left: 5px solid #807f7f;
   margin-top: 20px;
+
+  color: #222; /* ✅ FIX: dark readable text */
 }
+
 .quiz-question {
   background-color: white;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.10);
+
+  color: #222; /* ✅ FIX */
 }
-.quiz-question h3 {
-  margin-top: 0;
+
+.quiz-question p {
   color: #222;
 }
+
 .quiz-question label {
   display: block;
   margin: 6px 0;
+  color: #333; /* ✅ FIX */
 }
+
+.quiz-question strong {
+  color: #141e30;
+}
+
 .quiz-question input[type="text"] {
   width: 95%;
   padding: 8px;
   border: 1px solid #999;
   border-radius: 5px;
 }
+
 .quiz-button {
   background-color: #444;
   color: white;
@@ -191,29 +204,43 @@ footer a {
   font-weight: bold;
   cursor: pointer;
 }
+
 .quiz-button:hover {
   background-color: #666;
 }
 /* this is for showing correct and incorrect answers in the quiz results */
 .correct {
-  color: green;
-  font-weight: bold;
+  color: #22c55e;
+  font-weight: 600;
 }
 
 .incorrect {
-  color: red;
-  font-weight: bold;
+  color: #ef4444;
+  font-weight: 600;
 }
 /* this is for making the quiz results stand out */
 #results {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e8f0ff;
-  border: 2px solid #444;
-  border-radius: 8px;
-  font-weight: bold;
-  color: #222;
+  margin-top: 25px;
+  padding: 25px;
+  background-color: #0f172a;
+  border: 2px solid #243b55;
+  border-radius: 12px;
+  color: #e8eef5;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+#results h3 {
   text-align: center;
+  margin-bottom: 15px;
+  color: #c9d6ff;
+}
+#results p {
+  margin: 10px 0;
+}
+#results strong {
+  color: #ffffff;
 }
 
 /* this is for mobile phones and I removed the buttons taking up too much space */
@@ -267,5 +294,33 @@ footer a {
   #results {
     font-size: 16px;
     padding: 12px;
+  }
+}
+/* this is for very small phone screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    gap: 18px;
+    padding: 12px 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  main {
+    width: 96%;
+    padding: 8px;
+  }
+
+  .image-box img {
+    height: 180px;
+  }
+
+  body {
+    font-size: 15px;
   }
 }
